@@ -212,3 +212,6 @@ if __name__ == '__main__':
     bot.remove_webhook()
     print("Bot is running...")
     bot.infinity_polling(timeout=20, long_polling_timeout=10)
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.reply_to(message, "Bot working 👍")
